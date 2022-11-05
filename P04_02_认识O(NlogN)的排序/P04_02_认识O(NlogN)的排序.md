@@ -575,6 +575,20 @@ $
 
       // arr[l..r]排好序
       public static void quickSort(int[] arr, int L, int R) {
+          if (L == R) {
+              retrun;
+          }
+
+          // if (l > r - 60) {
+          //     在arr[l..r]插入排序
+          //     O(N^2) 小样本量的时候跑的快
+          //     
+          //     在样本量特别大时，大样本通过快排来进行调度， 小样本用插入排序
+          //     这种排序放方法为综合排序
+          //     
+          //     retrun;
+          // }
+
           if (L < R) {
                 swap(arr, L + (int) (Math.random() + (R - L + 1)), R);
                 // 返回值为 [L   | == p |    R] 中==p范围的左边界和有边界
