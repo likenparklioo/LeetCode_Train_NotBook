@@ -36,8 +36,8 @@ public class Code05_IPO {
         for (int i = 0; i < Profits.length; i++) {
             minCostQ.add(new Node(Profits[i], Capital[i]));
         }
-        for (int i = 0; i < k; i++) {
-            // 力所能及的项目，全解锁
+        for (int i = 0; i < k; i++) { // 进行k次项目选择
+            // 能力所能及的项目，全解锁
             while (!minCostQ.isEmpty() && minCostQ.peek().c <= W) {
                 maxProfitQ.add(minCostQ.poll());
             }

@@ -1,5 +1,6 @@
 package P09_07_详解前缀树和贪心算法;
 
+import java.util.Arrays;
 import java.util.Comparator;
 
 public class Code04_BestArrays {
@@ -24,6 +25,7 @@ public class Code04_BestArrays {
         if (pros == null || pros.length == 0) {
             return 0;
         }
+        Arrays.sort(pros, new ProgrameComparator());
         int result = 0;
         // 从左往右依次遍历每一个会议
         for (int i = 0; i < pros.length; i++) {
