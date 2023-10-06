@@ -590,12 +590,12 @@ $
           // }
 
           if (L < R) {
-                swap(arr, L + (int) (Math.random() + (R - L + 1)), R);
+                swap(arr, L + (int) (Math.random() * (R - L + 1)), R);
                 // 返回值为 [L   | == p |    R] 中==p范围的左边界和有边界
                 //              ^      ^
                 int[] p = partition(arr, L, R);
                 quickSort(arr, L, p[0] - 1); // < 区
-                quickSort(arr, L, p[1] + 1); // > 区
+                quickSort(arr, p[1] + 1, R); // > 区
           }
       }
 
